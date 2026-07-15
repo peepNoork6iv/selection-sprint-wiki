@@ -1,0 +1,771 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Staying at the dormitory</title><meta name="data-notion-page-icon" content="💤"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%92%A4%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3edc9af2-cffb-495e-b65a-31e6fba5953f" class="page sans" data-notion-page-icon="💤"><header><div class="page-header-icon undefined"><span class="icon" data-emoji="💤"></span></div><h1 class="page-title" dir="auto">Staying at the dormitory</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><nav id="9d979d89-571c-4896-8a8a-cb9aae21aead" class="block-color-gray table_of_contents" data-notion-highlight="gray" data-notion-toc="" dir="ltr"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0338a383-5871-4c1d-8e2f-784f2edc0759"><br/>About Dormitory</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#26c440b4-458b-805e-b77f-d222b16bd069">🧳 What to Bring</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8b9f0578-042c-4252-8e66-d75df07032fe">A<strong> quick summary of good manners</strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#72a3d2b7-29ee-4010-b8bd-2e3a8ece6348">‼️<strong>And more important factors…</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c24ef9c3-0b5e-47b9-a456-531bd2fb6929"><strong>Washing machines and dryers</strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#175440b4-458b-80b1-b59d-eb6a6c6a2091">🧳 What to Bring</a></div></nav><h1 id="0338a383-5871-4c1d-8e2f-784f2edc0759" class="" dir="auto"><br/>About Dormitory</h1><p id="db028dac-e137-48d4-9250-4123a4884458" class="" dir="auto"><strong>Student Housing is located on the 2nd floor of the kood/Jõhvi building.</strong> Each bed is equipped with a great quality mattress, <strong>but you need to bring your own pillow, blanket and bed linen and sheets.</strong></p><p id="26c440b4-458b-809f-9576-e2c85f6e6d73" class="" dir="auto">
+</p><h3 id="26c440b4-458b-805e-b77f-d222b16bd069" class="" dir="auto">🧳 What to Bring</h3><p id="26c440b4-458b-80b2-b633-cc7d5f282859" class="" dir="auto">To ensure a comfortable stay, please bring the following items:</p><ul id="2cd440b4-458b-80a4-b908-f1bdac088e39" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Pillow and blanket</strong></li></ul><ul id="26c440b4-458b-807a-82ea-c381e31d11e5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Bedding</strong>: sheets, pillwocases, blanket bags!</li></ul><ul id="26c440b4-458b-80f9-b50c-fa93c4f51ad1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Personal hygiene items</strong>: towels, toothbrush, toothpaste, soap, etc.</li></ul><ul id="26c440b4-458b-80c6-b230-dbeca40cf49c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Additional comfort items</strong>: earplugs, eye masks, or anything else you need for a cozy rest.</li></ul><ul id="26c440b4-458b-80be-9d17-c015b96c96f1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>For cooking</strong>: Cups, plates, forks, spoons, knives, pots, pans, and other possible things you might need.</li></ul><p id="26c440b4-458b-80e3-b446-e24d690bcbaa" class="" dir="auto">
+</p><p id="26c440b4-458b-80a7-82ec-d76faba2bc51" class="" dir="auto">
+</p><details id="01aebb6c-4d8a-4557-bc28-b87edb7ab102" open="" class="toggle" dir="auto"><summary><strong>🛏️ ROOM SETUP</strong></summary><div class="indented"><p id="3b545f17-3dde-45e3-b33c-c88c20f5b61f" class="" dir="auto">Rooms accommodate 5 people: 2 bunk beds and 1 larger bed on the half floor.</p><p id="e7da4d9d-a18b-4a40-8569-78f387b158c1" class="" dir="auto">Each bed is equipped with a great quality mattress, <strong>but you need to bring your own pillow, blanket, bed linen and sheets</strong>:</p><p id="36f440b4-458b-801d-a669-e97ca3634a72" class="" dir="auto"><br/>4x mattress (bunkbeds) 90x200 cm<br/>1x mattress (half-floor) 160x200 cm</p><p id="41b65021-c211-4c02-a3e9-44def156b32a" class="" dir="auto">After moving out of the dormitory every student has to make sure that his bed is clean (incl. mattress, pillow and blanket).</p><p id="0aeca176-b228-4be5-9716-1d31e1e68562" class="" dir="auto">The rooms are equipped with a table, 2 chairs and closets.</p><hr id="6d137133-99a2-4fcb-a8d2-8d9bed97cf17" dir="auto"/><p id="d61f8963-6841-4c1d-868f-5853cfc2a971" class="" dir="auto">🫧 CLEANING AND WASHING</p><p id="3e718a7b-bcf9-49e3-94fd-50ce466df1e9" class="" dir="auto">The dormitory floor is equipped with showers and bathrooms on the floor. All of them are private! Bring your own towels, shower gels, and everything else regarding your hygiene.</p><p id="ed691828-2c43-4472-929a-f1e5be7015d8" class="" dir="auto">Want to wash your clothes/linen etc? No problem!<br/>The building is equipped with washing machines and drying machines. You do need to bring your own detergent!</p><hr id="93d71fad-c0cd-42f2-9c86-8a9c11586e99" dir="auto"/><p id="8c4658f4-5770-4bdf-86dd-3ee4051f6fe7" class="" dir="auto">🧑‍🍳 KITCHEN</p><p id="12afe3e4-5d75-4ed4-abe0-ad0181392bff" class="" dir="auto">The dormitory floors are equipped with kitchens! You have stoves, sinks, ovens, fridges and cupboards. You have free command over the kitchens on your floor but make sure to keep them clean!</p><p id="02f06a5d-dc65-458e-ae3a-1db9d5fbc20d" class="" dir="auto"><strong>Bring your own:</strong></p><ul id="17b27885-1198-426f-90e5-a2874c20f053" class="bulleted-list" dir="auto"><li style="list-style-type:disc">cooking equipment (pots, pans, etc…) - <strong>suitable for induction cooktops.</strong></li></ul><ul id="20187286-38d5-4279-b05c-5ce182db95bd" class="bulleted-list" dir="auto"><li style="list-style-type:disc">kitchen utensils (knives, spatulas, etc…)</li></ul><ul id="fdeabd83-6e69-456b-8aa8-fad7788af482" class="bulleted-list" dir="auto"><li style="list-style-type:disc">tableware (cutlery, plates, bowls, etc…)</li></ul><ul id="90a836bc-c273-4f56-89b0-ce26282b7c32" class="bulleted-list" dir="auto"><li style="list-style-type:disc">kitchen towels, sponges and similar equipment</li></ul><hr id="679474d9-90c3-46f4-98bf-ac82a2192224" dir="auto"/><p id="5cb56c69-0411-4af7-af8d-08509fb45cee" class="" dir="auto">🧹 HOUSEKEEPING</p><p id="1e03b788-0184-40e6-b278-c5fa81d8559f" class="" dir="auto">We have essentials for cleaning but you are in charge of cleaning your rooms and keeping common areas in order, so make sure to take that into account.</p><hr id="d73c64fc-fb83-403b-a8e2-cfe8eb650d6c" dir="auto"/><p id="76199e51-bc64-42f3-8e10-5c3863c2b9ed" class="" dir="auto">NICE TO HAVE</p><p id="52e2ebb4-1fee-4767-92b1-613e52a1250a" class="" dir="auto">Well, anything that makes you feel more at home. 🏘️ Oh, and slippers will definitely go a long way! 🥿</p><hr id="d0796009-b1bd-4d81-b9b1-1f603798a727" dir="auto"/></div></details><h1 id="8b9f0578-042c-4252-8e66-d75df07032fe" class="" dir="auto">A<strong> quick summary of good manners</strong></h1><ul id="0bba8be2-d20e-401c-871e-0d8d213c8d87" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Be tidy and clean! Cleaning ladies are taking care of the common areas, but you are responsible for cleaning up after yourself</li></ul><ul id="179ab6a2-bc9d-4246-bf74-4f91c286a008" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t turn on the lights unnecessarily in the rooms</li></ul><ul id="b81bcac9-6373-4e67-bef7-1356d813478e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t smash the doors</li></ul><ul id="da888345-92d5-4b35-8af6-bc748dcf35b7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Do not use other roommates’ space (or things!)</li></ul><ul id="1e2d0e1e-4975-425c-bdfa-4b356142a2d1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Leave the common spaces at least as clean as you found them</li></ul><hr id="d1868385-424d-42ce-8fe0-82c06b377082" dir="auto"/><h1 id="72a3d2b7-29ee-4010-b8bd-2e3a8ece6348" class="" dir="auto">‼️<strong>And more important factors…</strong></h1><aside class="block-color-gray_background callout" data-notion-callout="" data-notion-callout-icon="👉" data-notion-callout-background="gray_background" style="white-space:pre-wrap;display:flex" id="d8d6dc8f-478d-4eac-9d42-7eafc5dbe544" dir="ltr"><div style="font-size:1.5em"><span class="icon" data-emoji="👉"></span></div><div style="width:100%"><strong>If you do not follow the Student Housing rules</strong> and/or behave inappropriately according to the community rules and code of conduct, you will receive a written warning from kood/Jõhvi. If you receive two written warnings, you will lose the privilege of living in the hostel and must vacate your spot within 48h. A written warning will be sent via email to your email address.</div></aside><ul id="c8fe6ae9-d607-464a-b95d-868bff69a499" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Respect each other, please! </strong>The number one unwritten rule for living with other people is <strong>Respect! </strong>Basically, it implies these common-sense rules for a nice coexistence.</li></ul><ul id="0c4cd7e7-b062-4df7-ad64-0a566dc5abfa" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Do not make noise between 11 PM and 8 AM. </strong>This actually goes without saying, but the silent mode is a good idea! Common areas are meant for hanging out, having phone conversations, or other activities. Use them and do not disturb your roommates.</li></ul><ul id="41ed0baf-3cea-48e1-b654-de9a27f3b17d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Want to cook? Clean up afterward. </strong>The kitchen is a common area, please do your dishes right after cooking and keep it clean for everyone.</li></ul><ul id="dab9d575-aebf-4a4f-b389-18a10ff0d552" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Use trash bins.</strong>  No food down the sinks!</li></ul><ul id="4f114752-0ca5-4140-b7fa-513c3fdcf091" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>The bathroom is not your SPA.</strong> The bathroom is also a common area, please consider others.</li></ul><ul id="0c2ff02d-64f3-4dfb-ad0c-a5811b69f149" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>A note for Early and Late birds: </strong>If you arrive at the hostel very late/early, just prepare all the stuff you will need outside of the room before you go in. That way, you won’t disturb your roommates.</li></ul><ul id="86bb1446-a9d9-4e80-80a7-e3ee4c342ccf" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Tag it! (your food) </strong>Before putting your food in the fridge or on shelves simply tag your food with your name and room number.</li></ul><ul id="49acfcc4-853f-43ef-b27f-cc074514ebda" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>If you move it, put it back.</strong> That includes sofas, tables, TVs, wires, and monitors.</li></ul><ul id="96988ac4-e95f-4fd8-b64a-20ca2655a1f9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">We have <strong>washing machines and dryers</strong>, just bring detergent for washing.</li></ul><ul id="7cdfb6c7-c3cb-4871-94b9-729dd72bb010" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Drinking alcohol and smoking is forbidden in the Student Housing and school premises! </strong></li></ul><ul id="feae6d06-5a93-402d-9efe-737d668f8d2c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Smoke/vaping is forbidden indoors or on the school premises. It has already been restricted in Estonia since 2005.</li></ul><ul id="86b46b49-5e2e-4ba7-ae63-36c6f62f8786" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Don’t act against the applicable laws, rules, and regulations of the Republic of Estonia.</strong></li></ul><ul id="d53d9d95-a94a-4447-ae67-0528ed049fab" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>A smile goes a long way (in a hostel and anywhere). </strong>Be polite to our security staff and cleaning ladies.<strong> </strong>A good way to meet people and give a positive start to someone’s day is with a simple smile. Be friendly and nice to each other.</li></ul><blockquote id="31d25be1-88d5-4f7f-a5d1-9b2f576745d9" class="" dir="auto">❗️<strong>Student Housing is ONLY for kood/Jõhvi students, sprinters or confirmed visitors!</strong> Your friends or family can’t stay in the dormitory with you. If they want to just visit the building, it is possible, but please let the staff know.</blockquote><hr id="ab0cc1b2-664a-4a9b-89c1-91f4254e3479" dir="auto"/><h2 id="c24ef9c3-0b5e-47b9-a456-531bd2fb6929" class="" dir="auto"><strong>Washing machines and dryers</strong></h2><p id="d275bcda-1c60-47f5-b903-bacd9ea57de5" class="" dir="auto">We understand that keeping your clothes clean is an important part of daily life, and we want to make sure that you have the resources to do so in an efficient and environmentally friendly manner:</p><ul id="bbff1f31-b4cb-4fcd-b8fe-acccbfc070d7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Location: 0-floor, access from the right stairwell (next to the big hostel kitchen). </li></ul><ul id="7e70bad7-89de-486b-8210-140dc57c10b6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Please fill in the registration form before using the machines. </strong>This helps to ensure that the machines are being used efficiently and prevents overloading.</li></ul><ul id="06aed1c8-665c-48e5-8389-940ae3bca788" class="bulleted-list" dir="auto"><li style="list-style-type:disc">If some of the outlets are not working, <strong>contact the team on the 5th floor</strong> and show which ones are not working and he will contact the construction company for fixing.</li></ul><ul id="ccc781df-34a7-4f59-8bff-9efd79dfbf72" class="bulleted-list" dir="auto"><li style="list-style-type:disc">After using <strong>the dryer</strong> please empty the water filter (upper-left corner) and clean the lint filter (middle).</li></ul><ul id="543f2d92-7c4c-4e6d-80e4-1ebff68850e1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">And please <strong>respect the environment and machines- </strong>need-based washing, avoid washing half-empty loads. Washing full loads not only conserves water and energy, but it also helps to reduce wear and tear on the appliances.</li></ul><aside class="block-color-gray_background callout" data-notion-callout="" data-notion-callout-icon="⚠️" data-notion-callout-background="gray_background" style="white-space:pre-wrap;display:flex" id="a073d208-150b-4d50-8c53-a38a0feed6b0" dir="ltr"><div style="font-size:1.5em"><span class="icon" data-emoji="⚠️"></span></div><div style="width:100%"><strong>Please note: you are not allowed to move machines on your own, machines are connected to the water outlets and by moving they loose the connection.</strong></div></aside><p id="30b98d2e-4d55-4103-af76-01993cd691df" class="" dir="auto"><em>Thank you for your cooperation in keeping the laundry room a pleasant and sustainable place!</em></p><hr id="024aba9c-3bfe-40bb-8814-dc9f3f214ee1" dir="auto"/><h3 id="175440b4-458b-80b1-b59d-eb6a6c6a2091" class="" dir="auto">🧳 What to Bring</h3><p id="175440b4-458b-8027-a679-e70bc430e2a0" class="" dir="auto">To ensure a comfortable stay, please bring the following items:</p><ul id="175440b4-458b-80f0-81a8-d88d00a5e315" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Bedding</strong>: pillows, blankets, sheets, pillowcases, blanket bags!</li></ul><ul id="175440b4-458b-8051-a0df-dfca996a27fe" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Personal hygiene items</strong>: towels, toothbrush, toothpaste, soap, etc.</li></ul><ul id="175440b4-458b-8073-a894-e13ece1a4ea6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Additional comfort items</strong>: earplugs, eye masks, or anything else you need for a cozy rest.</li></ul><ul id="175440b4-458b-807d-bf2f-fa1f8ed4bac8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>For cooking</strong>: Cups, plates, forks, spoons, knives, pots, pans, and other possible things you might need.</li></ul><p id="1d6440b4-458b-8046-9438-c479563576c2" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,768 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>What comes next? - FAQ</title><meta name="data-notion-page-icon" content="❓"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%E2%9D%93%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="17a440b4-458b-8181-862e-ca93a94a0859" class="page sans" data-notion-page-icon="❓"><header><div class="page-header-icon undefined"><span class="icon" data-emoji="❓"></span></div><h1 class="page-title" dir="auto">What comes next? - FAQ</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="17a440b4-458b-8135-8a54-d048f7565fbf" class="" dir="auto">Studying at //kood</h2><details id="17a440b4-458b-81e3-8817-c21b1fcaca74" open="" class="toggle" dir="auto"><summary><strong>When will I know if I got into //kood?</strong></summary><div class="indented"><p id="17a440b4-458b-8193-acc2-db997f389987" class="" dir="auto">We will start finalizing the results and letting the people accepted know after the end of the Selection Sprint. You’ll get your results ~3 weeks after the end of the Selection Sprint.</p></div></details><details id="17a440b4-458b-81c9-ab32-d6731e0a6dc7" open="" class="toggle" dir="auto"><summary><strong>Do I need to sign a contract with //kood to start studying?</strong></summary><div class="indented"><p id="17a440b4-458b-8187-a9a8-e67a1dc4955b" class="" dir="auto">Yes, all students who start studying at //kood sign a Student Agreement that covers the rights and obligations of both the student and the school. You have the right to terminate the agreement within<strong> 2 months</strong> from the start of your studies without any obligations. If you continue studying and decide to leave between <strong>month 3 and graduating</strong>, you are obliged to pay the Early Termination Fee in order to cover the expenses that are made per student (detailed information in the contract which you will receive once accepted to the school). </p><p id="17a440b4-458b-8150-9773-f1579ef819fa" class="" dir="auto">As the school operates as an NGO and is not governmentally funded, it needs to be sustainable in alternative ways and to cover the costs of each student. The agreement also includes the<strong> Income Sharing Agreement </strong>applies to all the students that join //kood from 2023 onwards. The purpose of the fee is to cover //kood’s study and operational costs and serves the purpose of making the school sustainable for years to come and educating even more students each year.</p><p id="17a440b4-458b-8182-b385-f88f45873d9c" class="" dir="auto"><strong>If a student gets a job on their own,</strong> the agreement comes into effect once the student starts to receive monthly gross income from their employer that is at least 1.2x the Estonian average income (based on the data from the statistics department). The students starting their studies in //kood shall reimburse a total amount of €4500. Once the agreement comes into effect, the payment is not less than €200/month until the total sum is paid.</p></div></details><details id="17a440b4-458b-8116-903a-d7e36c5916a9" open="" class="toggle" dir="auto"><summary><strong>Will I get a degree after the completion of the study? </strong></summary><div class="indented"><p id="17a440b4-458b-81de-b330-d4e2349a7c67" class="" dir="auto">You will receive a <strong>certificate of graduation </strong>after graduation that is confirmed with the Estonian Education Ministry. It is also accompanied by different certificates dependent on all your finished modules.</p><p id="17a440b4-458b-812f-9cd0-c62490638214" class="" dir="auto">After you complete your studies, you <strong>do not receive an accredited degree</strong> as this educational model is new in Estonia and does not correspond to any traditional definitions. However, we do not believe this to be a problem in the technology sector, given that companies tend to only care about what you can do, who you are, and how you work.</p></div></details><details id="17a440b4-458b-817a-bdb7-f5c28fe23162" open="" class="toggle" dir="auto"><summary><strong>How similar will be the Selection Sprint and the actual studies? How intensive the 1-year program will be? How tight are deadlines for quests and tasks? Same as in this Sprint or less intensive?</strong></summary><div class="indented"><p id="17a440b4-458b-81f0-a03d-dc11da61e506" class="" dir="auto">Generally, the program will be less intense compared to the Selection Sprint, but you will still have deadlines that you need to follow. </p><p id="17a440b4-458b-81e2-9fd8-ed61881b3b93" class="" dir="auto">The idea of the Selection Sprint is really to test you to see how you cope with harsh deadlines and tricky tests, while the program focuses on your constant development at your own speed. </p><p id="17a440b4-458b-8137-bf32-c68b6efa797d" class="" dir="auto">The deadlines in the rest of the program are usually weeks, not days, but you will still have two Sprints during the two years that will be more intense. However, the longer deadlines do not mean that you have a lot of free time, the tasks are more extensive and have other smaller tasks in them, so you definitely need to put some time into them. </p></div></details><details id="17a440b4-458b-81d3-99a8-d37408427511" open="" class="toggle" dir="auto"><summary><strong>Can the 12-16 month program be done mostly remotely? Let’s say 90/10 ratio of remote/on-site work?</strong></summary><div class="indented"><p id="17a440b4-458b-8173-8b96-fd5970ba8979" class="" dir="auto">Based on the experience of other schools with similar methodology and our own experience, then it is recommended to be on-site as much as possible as it is easier to study together with others (which you hopefully will learn at the Selection Sprint). <br/><br/>However, it is possible to do it also remotely, but it will definitely be harder. About half of the students do the program fully remotely. We recommend being on-site as much as possible and cannot give the exact percentage of time that you could do remotely. It also depends on your own personal time management skills, motivation, working possibilities at home etc. The key thing is not to fall behind and actually learn and that is definitely easier on-site.  </p><p id="17a440b4-458b-81a8-9fa4-db95f4e1003f" class="" dir="auto">There will also be additional events, hackathons, etc on-site, that are mandatory to attend on-site to complete your studies. </p></div></details><details id="17a440b4-458b-811a-88d3-ef1d96b5fc59" open="" class="toggle" dir="auto"><summary><strong>If most of the projects are group projects, then how can one go through the program at their own pace? Especially in cases where groups are randomly assigned?</strong></summary><div class="indented"><p id="17a440b4-458b-81f3-bf31-d66d5c07eec8" class="" dir="auto">If you reach teamwork and there are no other students at the same level, you have other optional tasks to continue with to strengthen your knowledge and learn in more detail about a certain coding language or task. You can form your own teams / groups and <strong>these are not done randomly</strong>.</p></div></details><details id="17a440b4-458b-8171-8820-f0a6c12ab048" open="" class="toggle" dir="auto"><summary><strong>Do you have to submit &amp; succeed in a task (within a Topic) to see the next task (similarly to the Selection Sprint)?</strong></summary><div class="indented"><p id="17a440b4-458b-81aa-b6af-f330aabe5b19" class="" dir="auto">During the school year, there&#x27;s a combination of access. Some topics are open simultaneously, some work the same way as you had during the Selection Sprint (submit to receive access to the next one). </p><p id="17a440b4-458b-81a5-8cdb-dd708425bb43" class="" dir="auto">Generally, you have longer deadlines compared to Selection Sprint. The idea of the Selection Sprint is really to test you, during the study program itself it is up to you to gain all the knowledge and skills at your own speed. </p></div></details><details id="17a440b4-458b-81d7-967c-d7cfc05b0064" open="" class="toggle" dir="auto"><summary><strong>What will be the grading/passing system at the school?</strong></summary><div class="indented"><p id="17a440b4-458b-818f-b1cb-d4e272e013a2" class="" dir="auto">You won&#x27;t receive traditional grades, but rather points, similar to the Selection Sprint. There are mandatory tasks you need to complete to unlock the next ones, as well as optional and more challenging tasks that you can choose to do. Completing all the mandatory tasks is required to graduate from the program.</p></div></details><details id="17a440b4-458b-8142-935b-f47f91e4bd59" open="" class="toggle" dir="auto"><summary><strong>What if I fall behind in my studies?</strong></summary><div class="indented"><p id="17a440b4-458b-818e-aafd-e4ef86fe207f" class="" dir="auto">You will have specific deadlines that you need to complete to get Points during the program and in some cases, you need to complete them to get access to the next tasks. You will have deadlines that you will sign in the student agreement and confirm to finish a module by that time.</p><p id="17a440b4-458b-813d-9bf0-c39cffb83fdf" class="" dir="auto">We will keep track of everyone&#x27;s performance to see if anyone is falling behind and needing help, but definitely, a good way to avoid that is to be on the spot at the school as it&#x27;s easier to ask for help from your peers and to catch up. We also suggest reaching out to the //kood team if you feel like you’re falling behind.</p></div></details><details id="17a440b4-458b-81ea-8491-e812e7ba6239" open="" class="toggle" dir="auto"><summary><strong>Will there be real-life meetings with industry reps etc. during the 12-16 month program?</strong></summary><div class="indented"><p id="17a440b4-458b-81ac-a347-cf8949beab91" class="" dir="auto">There will be industry meetings, hackathons, and other events with our partners and industry players. We are also planning on additional courses in soft skills to help you in the job market (e.g. building your resume, how to succeed in a job interview etc). </p></div></details><h2 id="17a440b4-458b-81b9-9f8e-ecadbb585e89" class="" dir="auto">Learning Centres &amp; Dorms</h2><details id="17a440b4-458b-81fa-a53e-d8d11b7b77c4" open="" class="toggle" dir="auto"><summary><strong>How much does it cost to live in the dorms and how can I book a spot? How do you decide who gets them if there will be more demand than free places?</strong></summary><div class="indented"><ul id="17a440b4-458b-8173-9df1-d4bff98d63fe" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Yes! You can rent a bed at the kood/Jõhvi dormitory (The monthly rate per bed is 60 EUR including VAT), kood/Võru Dormitory (monthly rate per bed is 55-80 EUR + VAT).</li></ul><ul id="17a440b4-458b-81cd-9e73-fa721ca151ef" class="bulleted-list" dir="auto"><li style="list-style-type:disc">If there’s a free space, the beds can be rented by night, 5 EUR per night in Jõhvi, 6-10 EUR per night + VAT in Võru, ~15-16€ per night in Paide.</li></ul><ul id="17a440b4-458b-8198-b609-ed2a5d951702" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Rooms are distributed on 1st come, 1st served logic. <strong>You can sign up for a room after a successful Sprint. </strong>Information will be sent to your email. You need to fill in the form</li></ul><ul id="17a440b4-458b-81d6-8807-f7c6f1046e19" class="bulleted-list" dir="auto"><li style="list-style-type:disc">In case there are no spots left on campus, then we can’t help with finding a place to live. Feel free to expand your options by looking at AirBnb / <a href="http://booking.com/">Booking.com</a> or other sites for accommodation</li></ul></div></details><details id="17a440b4-458b-812f-a55e-c632a658462d" open="" class="toggle" dir="auto"><summary><strong>Do I have to live on learning centre? </strong></summary><div class="indented"><p id="17a440b4-458b-816c-8248-c48f10b2d88c" class="" dir="auto">No, living on learning centre is not mandatory, however, we strongly recommend living close to the learning centre. This ensures that you will be able to collaborate with other students, create meaningful bonds, and succeed in your studies.</p><p id="17a440b4-458b-8188-af37-e6b252055952" class="" dir="auto">If you feel like it is not possible to move to a different city at the moment, we recommend to at least some to the building for a few days every month to study together with your team.</p></div></details><details id="17a440b4-458b-8171-9fc4-f537ba1e6795" open="" class="toggle" dir="auto"><summary><strong>Is there enough room in the dorm rooms to bring my desktop computer?</strong></summary><div class="indented"><p id="17a440b4-458b-8178-8a55-fe0b5088b22a" class="" dir="auto">You can set up your desktop in the co-working space. The dorm rooms are meant for sleeping / chilling, but not studying.</p></div></details><h2 id="17a440b4-458b-812e-b51e-cd3bdb50b098" class="" dir="auto">Income Sharing Agreement</h2><details id="17a440b4-458b-8170-af4c-e2f3af17356c" open="" class="toggle" dir="auto"><summary><strong>What is the //kood Income Sharing Agreement?</strong></summary><div class="indented"><p id="17a440b4-458b-811b-a49b-e6d4d5b98a32" class="" dir="auto">The <strong>Income Sharing Agreement </strong>applies to all the students that join //kood from 2023 onwards. The purpose of the fee is to cover //kood’s study and operational costs and serves the purpose to make the school sustainable for years to come and educate even more students each year.</p><p id="17a440b4-458b-8177-a750-dbaaa17ab4b2" class="" dir="auto"><strong>If a student gets a job in one of our official partner companies</strong>, then the Income Sharing Agreement does not apply. The partners are covering the fee by sponsoring the school. There are no extra fees or obligations included. Our partner companies list may vary and  differ from batch to batch.</p><p id="17a440b4-458b-8199-acb7-d06883f3d24d" class="" dir="auto"><strong>If a student gets a job on their own,</strong> the agreement comes into effect once the student starts to receive monthly gross income from their employer that is at least 1.2x the Estonian average income (based on the data from the statistics department on a year average). The students starting their studies at //kood shall reimburse a total of €4500. Once the agreement comes into effect, the payment is not less than €200/month until the total sum is paid.</p></div></details><details id="17a440b4-458b-81c0-87ad-e73f0cc749d1" open="" class="toggle" dir="auto"><summary><strong>Who is eligible for the Income Sharing Agreement?</strong></summary><div class="indented"><p id="17a440b4-458b-817a-8e32-f1680852a5f2" class="" dir="auto">All the students that join //kood from 2023 onwards have to sign an Income Sharing Agreement and reimburse a total of €4500 after they graduate or start working while studying. Income Sharing Agreement can also be paid by the third party.</p></div></details><details id="17a440b4-458b-8180-bd0d-e49ce5c0a634" open="" class="toggle" dir="auto"><summary><strong>How much do participants owe and when do they need to pay?</strong></summary><div class="indented"><p id="17a440b4-458b-8142-ae5c-c9a9aaa82e3c" class="" dir="auto">Participants owe a total of €4500 under the Income Sharing Agreement. They need to start making payments once they start earning a monthly gross income that is at least 1.2x the Estonian average income. </p></div></details><details id="17a440b4-458b-81b4-aca5-c8816b320333" open="" class="toggle" dir="auto"><summary><strong>What happens if a participant doesn&#x27;t find a job?</strong></summary><div class="indented"><p id="17a440b4-458b-8106-803c-fd22c94cddf0" class="" dir="auto">If a participant doesn&#x27;t find a job, they are not required to make any payments under the Income Sharing Agreement (ISA). However, they will need to provide salary statements every 3 months to demonstrate that they do not have a job or that their income is lower than the required threshold of 1.2 times the Estonian average income. The ISA remains valid for a duration of 10 years, during which time the participant&#x27;s job status and income will be periodically reviewed to ensure compliance with the agreement&#x27;s terms.</p></div></details><details id="17a440b4-458b-811b-be63-ebb29b040750" open="" class="toggle" dir="auto"><summary><strong>How is the Income Sharing Agreement different from a traditional loan?</strong></summary><div class="indented"><p id="17a440b4-458b-81e2-8604-e09947d9d7e0" class="" dir="auto">The difference between ISA and a traditional loan is that ISA only requires payments to start once the participant secures a job and starts earning above a certain income threshold. Payments depend on the individual&#x27;s earnings, making it more flexible and aligned with their financial capacity.</p></div></details><details id="17a440b4-458b-81bd-bd48-f0fb8286488a" open="" class="toggle" dir="auto"><summary><strong>If I first get a job at //kood partner company and later get a job on my own then will the Income Sharing Agreement still come into effect?</strong></summary><div class="indented"><p id="17a440b4-458b-8189-8928-ce5d70077812" class="" dir="auto">If you go to work at one of our partner companies, then you don’t have to worry about the Income Sharing Agreement. <strong>Keep in mind, that our partner companies list may vary and differ from batch to batch. </strong>It’s important to note that this is valid if you successfully finish the probation period within the company (generally 4 months). If you or the company decides during the probation period not to proceed with the employment contract, then you are still going to be part of the Income Sharing Agreement model. The partners are covering the fee by sponsoring the school. </p></div></details><details id="17a440b4-458b-816f-bdbd-d5906707df32" open="" class="toggle" dir="auto"><summary><strong>If I get just 1 paycheck that is above the 1.2x gross income, will I immediately have to start paying the €200/month?</strong></summary><div class="indented"><p id="17a440b4-458b-81ea-be25-fd45d3341454" class="" dir="auto">In this case, you pay for the period you were at work with the 1.2x gross income. After that you will start paying again when you get a job that also pays more than 1.2x the Estonian gross income.</p></div></details><details id="17a440b4-458b-811c-941d-c696ff30a143" open="" class="toggle" dir="auto"><summary><strong>What are your partner companies?</strong></summary><div class="indented"><p id="17a440b4-458b-8176-8dc9-f42ee1ff773a" class="" dir="auto">You can find the list of our partner companies <a href="https://kood.tech/en/about-us/our-partners/">here</a>. Keep in mind, that our partner companies list may vary and differ from batch to batch. </p></div></details><details id="17a440b4-458b-812f-8448-c51f99bbaac4" open="" class="toggle" dir="auto"><summary><strong>I am already working in a partner company, do I have to pay if I move to the engineering department within the company? (I am currently working in another department)</strong></summary><div class="indented"><p id="17a440b4-458b-81cc-aefa-cd476aa76bd2" class="" dir="auto">If you already work in a partner company before coming to //kood and get a promotion there (change the position/department) through the knowledge and skills you acquired in our school, then you don’t have to pay. Please note, that you still have to let us know about the change of your position in a company.</p></div></details><h1 id="17a440b4-458b-81bf-83ba-d99913e8d4c2" class="" dir="auto"><strong>Extra questions</strong></h1><details id="17a440b4-458b-8167-bbe7-f045fc121fa2" open="" class="toggle" dir="auto"><summary><strong>If I want to study remotely, what kind of technology does the school provide?</strong></summary><div class="indented"><p id="17a440b4-458b-815f-8efc-c8f43c074ec9" class="" dir="auto">You can rent a laptop from our partner GreenDice, information <a href="https://app.notion.com/p/Laptop-Info-97fcfd59c1f24975ad89977a6ee52580?pvs=21">here</a> . If needed, you can use also monitors, but <strong>on-site</strong> only.</p></div></details><details id="17a440b4-458b-8126-b31c-c50511fab6d7" open="" class="toggle" dir="auto"><summary><strong>Is it correct, that //kood students cannot apply for a student loan?</strong></summary><div class="indented"><p id="17a440b4-458b-81c5-b406-d216f819574a" class="" dir="auto">Since we’re registered in Estonia as a furthering education institution then unfortunately by the law you can’t apply for a student loan at the moment. </p></div></details><details id="2d1440b4-458b-8095-a71a-e6b7cd0c397d" open="" class="toggle" dir="auto"><summary><strong>Can I apply for Study leave at work?</strong></summary><div class="indented"><p id="2d1440b4-458b-8027-a1ac-df9e35293c22" class="" dir="auto">You have the possibility to get up to 30 days of study leave from work <a href="https://www.hm.ee/et/eesmargid-tegevused/taiskasvanuharidus/oppepuhkus-ja-koolituse-rahastamine">as stated in the law</a>. </p></div></details><details id="17a440b4-458b-8190-ac33-ced29565c6a6" open="" class="toggle" dir="auto"><summary><strong>What options will there be (paid or not) for short-term accommodation during events/hackathons/Sprints?</strong></summary><div class="indented"><p id="17a440b4-458b-813b-bfa7-fa29c8a6371f" class="" dir="auto">If there’s a free space in the dormitory, the beds can be rented by night for 5 EUR per night in Jõhvi or 6-10 EUR per night + VAT in Võru. Our kood/Järva learning centre doesn’t have a dormitory.</p></div></details><details id="17a440b4-458b-81ed-bbc3-d067176843b2" open="" class="toggle" dir="auto"><summary><strong>If you end up opening learning centers in other cities, are current //kood students welcome to use the rooms or will they be reserved only for students in that branch?</strong></summary><div class="indented"><p id="17a440b4-458b-812d-a442-e66ea220ae59" class="" dir="auto">Of course! We currently have learning centres in 3 locations around Estonia: Jõhvi, Paide  and Võru. You are welcome to use them!</p><p id="2d1440b4-458b-80ac-bfcd-e6871e6c9249" class="" dir="auto">The idea is to do hubs where you can get to know new people etc. It’s a big community! Maybe in the future even in other countries… Stay tuned!</p></div></details><details id="17a440b4-458b-8138-85c1-c2606c3096c8" open="" class="toggle" dir="auto"><summary><strong>If I don&#x27;t get accepted, can I try again next year?</strong></summary><div class="indented"><p id="17a440b4-458b-81eb-8dfb-e84835b4fb48" class="" dir="auto">Yes! You’ll be able to apply again in 6 months after the end of the Selection Sprint.</p></div></details><details id="17a440b4-458b-817b-b93f-d62b739fec66" open="" class="toggle" dir="auto"><summary><strong>Do we get any kind of material after Sprint to keep in touch or study more?</strong></summary><div class="indented"><p id="17a440b4-458b-8149-b9de-ca6c3743b243" class="" dir="auto">We will keep the Discord open for at least a year so you can keep in touch with each other. </p></div></details><details id="17a440b4-458b-8194-926d-e7fb952039d4" open="" class="toggle" dir="auto"><summary><strong>If we are accepted, do we have to wait until the start date of the studies to access new tasks?</strong></summary><div class="indented"><p id="17a440b4-458b-8179-8614-f09c2c32d015" class="" dir="auto">Yes, the tasks will open on the first day of your studies. </p></div></details><p id="17a440b4-458b-81c1-a245-d62a729fe9c4" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
