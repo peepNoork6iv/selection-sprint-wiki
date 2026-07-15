@@ -1,0 +1,769 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>About the building</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="277440b4-458b-8088-b3d4-fbc5a004b97e" class="page sans" data-notion-page-icon="attachment:63d16824-62d6-41f2-aece-516f6702fa3d:Kood_Voru-39.jpg"><header><img class="page-cover-image" src="About%20the%20building/Kood_Voru-35%201.jpg" style="object-position:center 28.280000000000005%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="About%20the%20building/Kood_Voru-39.jpg"/></div><h1 class="page-title" dir="auto">About the building</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Tags</th><td><span class="selected-value select-value-color-gray">Policies</span></td></tr><tr class="property-row property-row-last_edited_time"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/clock_gray.svg" style="width:14px;height:14px;display:block"/></span>Updated</th><td><time datetime="2025-12-18T17:56">December 18, 2025 5:56 PM</time></td></tr></tbody></table></header><div class="page-body"><aside class="block-color-blue_background callout" data-notion-callout="" data-notion-callout-icon="💡" data-notion-callout-background="blue_background" style="white-space:pre-wrap;display:flex" id="277440b4-458b-8056-88ce-c643f347aaa2" dir="ltr"><div style="font-size:1.5em"><span class="icon" data-emoji="💡"></span></div><div style="width:100%">Please respect the building like it is your home. It means cleaning up after yourself, putting things back, and not leaving your personal belongings around.</div></aside><p id="277440b4-458b-808e-9dc2-fc4f3d8c35fb" class="" dir="auto"><strong>Address:</strong> Tartu tn 25, Võru Linn, Võrumaa</p><hr id="277440b4-458b-8076-b57b-f1f5ae713550" dir="auto"/><nav id="277440b4-458b-80c2-8c39-c27d937a5e41" class="block-color-gray table_of_contents" data-notion-highlight="gray" data-notion-toc="" dir="ltr"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#277440b4-458b-80cb-a462-ddcc5ce58298">👉 C<strong>ommon Areas</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#277440b4-458b-80ac-bea0-e2200bc03442">👉 Good to know:</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#277440b4-458b-8037-a839-c3d5d60b842b">👉 Student Housing</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#277440b4-458b-80a3-b6b1-d905673d031f">👉 Study Space</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#277440b4-458b-8054-a66f-e0b746d2ddc0">‼️The Don’ts ‼️</a></div></nav><h1 id="277440b4-458b-80cb-a462-ddcc5ce58298" class="" dir="auto">👉 C<strong>ommon Areas</strong></h1><p id="277440b4-458b-8064-a5c2-eac328e23152" class="" dir="auto">The campus is located on the 4th floor. It features a study area with 40 seats, a silent area, a meeting room, a kitchen area, and sofa pods. The school is open 24/7 and is accessible with a key tag. There are entrances on both sides of the building and an elevator. Key cards are available for all kood/Võru students to access our campus. If you need a key tag, please contact Ingrid or Annika. If you wish to study at night, <strong>be respectful towards others</strong>. </p><ul id="277440b4-458b-8006-8d2d-c1583f00258b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1st floor</strong> is the entrance.</li></ul><ul id="277440b4-458b-8010-8905-d0a397379181" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2nd floor is Pangasaal. This is used jointly by kood/Võru and Võru Linnavalitsus for special events</strong>. You can only access this area when necessary, as the hall is locked.</li></ul><ul id="277440b4-458b-8085-8a7c-e88d6f97fd6d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>3rd floor is for toilets and wardrobe. </strong>Please use the wardrobe for your shoes and coats. </li></ul><ul id="277440b4-458b-80aa-8916-ffca3d623a74" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The <strong>4th floor is our campus and open for everyone to study.</strong></li></ul><figure id="2cd440b4-458b-8038-853b-dc7e5e6960eb" class="image" data-notion-image="About%20the%20building/Kood_Voru-41.jpg" dir="ltr"><a href="About%20the%20building/Kood_Voru-41.jpg"><img style="width:5859px" src="About%20the%20building/Kood_Voru-41.jpg"/></a></figure><figure id="2cd440b4-458b-8096-a739-f20db8a7909b" class="image" data-notion-image="About%20the%20building/Kood_Voru-35.jpg" dir="ltr"><a href="About%20the%20building/Kood_Voru-35.jpg"><img style="width:709.94140625px" src="About%20the%20building/Kood_Voru-35.jpg"/></a></figure><figure id="2cd440b4-458b-8076-a03a-db86d673abe8" class="image" data-notion-image="About%20the%20building/Your_paragraph_text.png" dir="ltr"><a href="About%20the%20building/Your_paragraph_text.png"><img style="width:709.9609375px" src="About%20the%20building/Your_paragraph_text.png"/></a></figure><h3 id="277440b4-458b-80ac-bea0-e2200bc03442" class="" dir="auto">👉 Good to know:</h3><ul id="277440b4-458b-80bb-9eb4-dafebe55b4c9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Please wear slippers/indoor shoes in the building for your own comfort and tidiness! </li></ul><ul id="277440b4-458b-80b0-bd07-de09b12e36a6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Students can use parking lots around and near the campus. Parking is free of charge in Võru. </li></ul><ul id="277440b4-458b-805d-b48b-e354fb20503f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Want to bring a friend over? Please inform the team beforehand.</li></ul><ul id="277440b4-458b-8057-aeb0-de13b9b0c145" class="bulleted-list" dir="auto"><li style="list-style-type:disc">We are pet-friendly, but you have to let others know if you bring your pet. Some people have allergies and are not fans of pets.</li></ul><ul id="277440b4-458b-809d-9790-f8f700594818" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The tap water is drinkable. ✅</li></ul><aside class="block-color-gray_background callout" data-notion-callout="" data-notion-callout-icon="🧐" data-notion-callout-background="gray_background" style="white-space:pre-wrap;display:flex" id="277440b4-458b-806c-8a98-f0e8413f0d16" dir="ltr"><div style="font-size:1.5em"><span class="icon" data-emoji="🧐"></span></div><div style="width:100%">And if something happens (e.g. coffee spilt on the couch, monitor broken, or something else) <strong>then let the team know ASAP</strong>. Overall keep tidy after yourself and everything is going to work out great!</div></aside><h2 id="277440b4-458b-8037-a839-c3d5d60b842b" class="" dir="auto">👉 Student Housing</h2><p id="277440b4-458b-803a-be9e-e169c8dbfbf2" class="" dir="auto">These guidelines are meant for students who live in our student housing. Please read them and if you have any questions, please turn to the team! <a href="https://app.notion.com/p/Student-housing-guidelines-85c516dbb0db4dba898ecf6c03629f20?pvs=21" data-notion-page-id="85c516db-b0db-4dba-898e-cf6c03629f20" data-notion-space-id="f988e80d-27a9-497e-8185-2b61c2930f99"><span class="icon" data-emoji="😴"></span>Student housing guidelines </a> </p><h2 id="277440b4-458b-80a3-b6b1-d905673d031f" class="" dir="auto">👉 Study Space</h2><ol type="1" id="277440b4-458b-806e-89dc-ed991d4c5fb9" class="numbered-list" start="1" dir="auto"><li><strong>Monitor Identification:</strong><ul id="277440b4-458b-80a6-b4f5-ec0dd664b221" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Register your monitor with Ingrid or Annika to include a kood/Võru sticker on it, so that others won’t take it.</li></ul></li></ol><ol type="1" id="277440b4-458b-80c5-a774-eef22afad9ee" class="numbered-list" start="2" dir="auto"><li><strong>Cleanliness:</strong><ul id="277440b4-458b-8090-a9b7-c66fe5858b76" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Do not leave trash on your tables (empty plastic bottles, candy/snack wrappers &amp; etc). Dispose waste appropriately.</li></ul><ul id="277440b4-458b-806f-908c-fecfa4cead62" class="bulleted-list" dir="auto"><li style="list-style-type:disc">No candles and perfume sprays are allowed! </li></ul><ul id="277440b4-458b-805c-9102-deda530830aa" class="bulleted-list" dir="auto"><li style="list-style-type:disc">You are allowed to eat at the armchair area and <strong>NOT </strong>your table. Small snacking is allowed. Please clean up after yourself right after. </li></ul></li></ol><ol type="1" id="277440b4-458b-8099-b61f-f90fcd193518" class="numbered-list" start="3" dir="auto"><li><strong>Mugs and Cups:</strong><ul id="277440b4-458b-808c-8eca-c5681b96c1bd" class="bulleted-list" dir="auto"><li style="list-style-type:disc">No dirty mugs, cups, or plates should be left unattended on tables. If left dirty or moldy, we reserve the right to dispose of them.</li></ul></li></ol><ol type="1" id="277440b4-458b-806f-b310-cba22929af1d" class="numbered-list" start="4" dir="auto"><li><strong>Table Decoration:</strong><ul id="277440b4-458b-8021-bdf3-fcabbfe3241a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Personalize and decorate only your assigned table. Any exceptions require prior approval from Ingrid. </li></ul></li></ol><ol type="1" id="277440b4-458b-80d1-88db-d43e1e69c7af" class="numbered-list" start="5" dir="auto"><li><strong>Table Usage:</strong><ul id="277440b4-458b-80ad-a387-faf63bbf7667" class="bulleted-list" dir="auto"><li style="list-style-type:disc">For permanent tables, individuals are allowed to use ONE table at a time.</li></ul></li></ol><ol type="1" id="277440b4-458b-8006-a99e-edcffae028d4" class="numbered-list" start="6" dir="auto"><li><strong>Table Checks</strong>:<ul id="277440b4-458b-804e-bdaf-ebeafd943c54" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Regular table checks are conducted every 2 weeks. Non-compliance with guidelines, especially leaving a mess, may result in a notice and/or the school staff has a right to throw away the dirty items. Please follow those guidelines to maintain a clean and welcoming co-working space!</li></ul></li></ol><details open="" class="" dir="auto"><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0"><h2 id="277440b4-458b-8054-a66f-e0b746d2ddc0" style="display:inline-block">‼️The Don’ts ‼️</h2></summary><div class="indented"><ul id="277440b4-458b-802c-9da5-f03549a9e8a6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don&#x27;t damage or deface kood/Järva or its fixtures, décor or furnishings.</li></ul><ul id="277440b4-458b-8078-96af-ee951d83f8b1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t break web, servers, devices or passwords or do other mean things.</li></ul><ul id="277440b4-458b-8061-8f70-de99d75589fb" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t download or send anything that could break the Internet, or someone’s devices or property. Nor anything you wouldn’t want your mother to see.</li></ul><ul id="277440b4-458b-80fa-b9b8-d5fcd2267ea8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t steal stuff! Using someone else’s physical or intellectual property is considered stealing. And stealing is a punishable crime. We will act accordingly.</li></ul><ul id="277440b4-458b-80f2-907e-cb1f0e334976" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t do drugs! The same goes with alcohol, especially within the school premises. It is <strong>strictly prohibited </strong>and police will be involved if needed. </li></ul><ul id="277440b4-458b-8029-9907-c595f25636dd" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t smoke/vape indoors or on the school premises, this includes the terrace. It has already been restricted in Estonia since 2005.</li></ul><ul id="277440b4-458b-807c-9df8-e56146a0e003" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t act against the applicable laws, rules, and regulations of the Republic of Estonia.</li></ul><ul id="277440b4-458b-80eb-9e86-f48fd335544a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t cause or participate in any kind of fights or cause discomfort to anyone, neither mental nor physical.</li></ul><ul id="277440b4-458b-80a8-b7cf-fe77e432e11f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Don’t create a false identity to confuse others.</li></ul><p id="277440b4-458b-8082-99c4-f2c46f5750e0" class="" dir="auto">                                             </p></div></details><p id="277440b4-458b-808f-9d46-e64455a17581" class="" dir="auto">
+</p><p id="277440b4-458b-800d-b4cf-e285a37962fc" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
